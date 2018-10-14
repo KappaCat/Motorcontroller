@@ -1,0 +1,75 @@
+
+
+Motor MotorA(9, 10, 11, 12);
+Motor MotorB(5, 6, 7, 8);
+
+void setup(){
+
+}
+
+void loop(){
+
+
+}
+
+
+
+class Motor{
+
+  public:
+  Flasher(int NC1, int NC2, int PC1, int PC2,){
+  pinMode(NC1, OUTPUT);
+  pinMode(NC2, OUTPUT);
+  pinMode(PC1, OUTPUT);
+  pinMode(PC2, OUTPUT);
+  int x = 0;
+  }
+
+  void Move(int direction, int speed){
+            int IsOn = 0
+
+              map(speed, 0, 100, 0, 80000)
+                if (speed != 80000){
+                  if(x <= speed){
+
+                  //IsOn is inverted because P Channel Mosfets are a thing
+                    IsOn = 0
+
+                    x + 1
+                    }else{
+                   
+                    IsOn = 1
+
+                    if (x => 80000){
+
+                    x = 0
+
+                    }
+                    }
+                  }
+
+
+    if(direction != 0){
+
+      if(direction > 0){
+        digitalWrite(NC1, HIGH);
+        digitalWrite(NC2, LOW);
+        digitalWrite(PC1, IsOn);
+        digitalWrite(PC2, HIGH);
+
+      }else{
+        digitalWrite(NC1, LOW);
+        digitalWrite(NC2, HIGH);
+        digitalWrite(PC1, HIGH);
+        digitalWrite(PC21, IsOn);
+
+      }
+    }else{
+      digitalWrite(NC1, LOW);
+      digitalWrite(NC2, LOW);
+      digitalWrite(PC1, HIGH);
+      digitalWrite(PC21, HIGH);
+
+    }
+  }
+}
